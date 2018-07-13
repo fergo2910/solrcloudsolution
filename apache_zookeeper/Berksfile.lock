@@ -1,0 +1,17 @@
+DEPENDENCIES
+  apache_zookeeper
+    path: .
+    metadata: true
+  apt (~> 2.4)
+
+GRAPH
+  apache_zookeeper (0.6.0)
+    java (>= 0.0.0)
+    ulimit (>= 0.0.0)
+  apt (2.9.2)
+  homebrew (5.0.4)
+  java (2.1.0)
+    homebrew (>= 0.0.0)
+    windows (>= 0.0.0)
+  ulimit (1.0.0)
+  windows (4.3.3)

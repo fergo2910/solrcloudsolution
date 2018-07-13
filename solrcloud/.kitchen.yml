@@ -1,0 +1,36 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: chef/ubuntu-14.04
+  - name: chef/centos-6.5
+
+suites:
+  - name: 5.1.0
+    run_list:
+      - recipe[solrcloud_test::prerun]
+      - recipe[solrcloud::default]
+    attributes:
+      solrcloud:
+        version: 5.1.0
+        zk_run: true
+  - name: 5.2.0
+    run_list:
+      - recipe[solrcloud_test::prerun]
+      - recipe[solrcloud::default]
+    attributes:
+      solrcloud:
+        version: 5.2.0
+        zk_run: true
+  - name: 5.4.0
+    run_list:
+      - recipe[solrcloud_test::prerun]
+      - recipe[solrcloud::default]
+    attributes:
+      solrcloud:
+        version: 5.4.0
+        zk_run: true

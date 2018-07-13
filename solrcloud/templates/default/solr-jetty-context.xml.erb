@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<!--
+# This file is managed by Chef.
+# Do NOT modify this file directly.
+-->
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+  <Set name="contextPath"><SystemProperty name="hostContext" default="<%=node.solrcloud.jetty_config.context.path-%>"/></Set>
+  <Set name="war"><SystemProperty name="jetty.home"/><%=node.solrcloud.jetty_config.context.war-%></Set>
+  <Set name="defaultsDescriptor"><SystemProperty name="jetty.home"/>/etc/webdefault.xml</Set>
+  <Set name="tempDirectory"><SystemProperty name="jetty.home"/><%=node.solrcloud.jetty_config.context.temp_directory-%></Set>
+</Configure>
