@@ -169,7 +169,7 @@ default['solrcloud']['solr_config']['solrcloud']['distrib_update_conn_timeout'] 
 default['solrcloud']['solr_config']['solrcloud']['distrib_update_so_timeout']      = 1_000_000
 default['solrcloud']['solr_config']['solrcloud']['leader_vote_wait']   = 1_000_000
 default['solrcloud']['solr_config']['solrcloud']['zk_client_timeout']  = 15_000
-default['solrcloud']['solr_config']['solrcloud']['zk_host']     = ["localhost:2181"]  # syntax: ["zkHost:zkPort"]
+default['solrcloud']['solr_config']['solrcloud']['zk_host']     = ["zookeeper:2181"]  # syntax: ["zkHost:zkPort"]
 default['solrcloud']['solr_config']['solrcloud']['zk_chroot']   = nil # syntax: '/solr'
 default['solrcloud']['solr_config']['solrcloud']['generic_core_node_names'] = 'true'
 
