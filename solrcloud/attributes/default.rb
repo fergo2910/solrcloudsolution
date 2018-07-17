@@ -3,6 +3,11 @@
 # to recipe `attributes`
 #
 
+instance = search("aws_opsworks_instance").first
+app = search("aws_opsworks_layer").first
+Chef::Log.info("********** hereeeeeeeeeeeeeeee '#{instance['layer_ids']}' **********")
+Chef::Log.info("********** hereeeeeeeeeeeeeeee '#{app['zk_host']}' **********")
+
 default['solrcloud']['install_zk_gem']  = true
 default['solrcloud']['install_java']  = true
 default['solrcloud']['user']          = 'solr'
