@@ -82,7 +82,7 @@ default['java']['oracle_rpm']['package_version'] = nil
 default['java']['oracle_rpm']['package_name'] = nil
 
 # if you change this to true, you can download directly from Oracle
-default['java']['oracle']['accept_oracle_download_terms'] = false
+default['java']['oracle']['accept_oracle_download_terms'] = true
 
 # direct download paths for oracle, you have been warned!
 
