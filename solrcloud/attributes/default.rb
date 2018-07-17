@@ -2,6 +2,10 @@
 # depend on other attributes has been moved
 # to recipe `attributes`
 #
+
+instance = search("aws_opsworks_layer").first
+zk_host_ip = instance['zk_host']
+
 default['solrcloud']['install_zk_gem']  = true
 default['solrcloud']['install_java']  = true
 default['solrcloud']['user']          = 'solr'
@@ -168,7 +172,7 @@ default['solrcloud']['solr_config']['solrcloud']['distrib_update_conn_timeout'] 
 default['solrcloud']['solr_config']['solrcloud']['distrib_update_so_timeout']      = 1_000_000
 default['solrcloud']['solr_config']['solrcloud']['leader_vote_wait']   = 1_000_000
 default['solrcloud']['solr_config']['solrcloud']['zk_client_timeout']  = 15_000
-default['solrcloud']['solr_config']['solrcloud']['zk_host']     = ["10.5.1.254:2181"]  # syntax: ["zkHost:zkPort"]
+default['solrcloud']['solr_config']['solrcloud']['zk_host']     = ["#{zk_host_ip}:2181"]  # syntax: ["zkHost:zkPort"]
 default['solrcloud']['solr_config']['solrcloud']['zk_chroot']   = nil # syntax: '/solr'
 default['solrcloud']['solr_config']['solrcloud']['generic_core_node_names'] = 'true'
 
