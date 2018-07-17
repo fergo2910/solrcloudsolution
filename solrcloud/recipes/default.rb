@@ -19,9 +19,11 @@
 
 
 instance = search("aws_opsworks_instance").first
-app = search("aws_opsworks_layer").first
+app = search("aws_opsworks_app").first
 Chef::Log.info("********** hereeeeeeeeeeeeeeee '#{instance['layer_ids']}' **********")
 Chef::Log.info("********** hereeeeeeeeeeeeeeee '#{app['zk_host']}' **********")
+
+
 
 # set default derived attributes
 include_recipe 'solrcloud::attributes'
