@@ -3,9 +3,6 @@
 # to recipe `attributes`
 #
 
-instance = search("aws_opsworks_layer").first
-zk_host_ip = instance['zk_host']
-
 default['solrcloud']['install_zk_gem']  = true
 default['solrcloud']['install_java']  = true
 default['solrcloud']['user']          = 'solr'

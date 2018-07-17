@@ -16,7 +16,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+app = search("aws_opsworks_layer").first
+Chef::Log.info("********** hereeeeeeeeeeeeeeee '#{app['zk_host']}' **********")
+# zk_host_ip = instance['zk_host']
+# Chef::Log.info("********** The app's short name is '#{instance['zk_host']}' **********")
 # set default derived attributes
 include_recipe 'solrcloud::attributes'
 
